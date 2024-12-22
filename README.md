@@ -19,6 +19,8 @@ Desenho da aplicação:
 
 ![Screenshot_41](https://github.com/user-attachments/assets/51fdc06f-1f44-4c0f-b2d1-d9a02324a455)
 
+A ideia com o novo desenho é que as requisições WEB cheguei no gateway e não diretamente na API. Assim com o Discovery Server (Eureka), conseguimos utilizar uma tecnologia chamado LoadBalancer. Com isso, podemos subir várias instancias da API e utilziar o LoadBalancer para balancear corretamente as requisições para diferentes instancias da API. Nisso, temos uma alta disponibilidade da nossa aplicação com um baixo tempo de resposta.
+
 [Desafio Técnico_Java.pdf](https://github.com/user-attachments/files/18223135/Desafio.Tecnico_Java.pdf)
 
 Responsa a alguns questionamentos do desafio:
