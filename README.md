@@ -13,6 +13,9 @@ Serviços desenvolvidos utilizando:
 1. Importe as collection que se encontra nos serviço (msgateway) no Postman.
 2. Subir o container do Keycloak:
   - `docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:22.0.5 start-dev`
+  - Importar o Realm na pasta Keycloak no (msgateway):
+  - ![Screenshot_43](https://github.com/user-attachments/assets/b36e95a6-40ba-4691-8293-531ac1e80b57)
+
 3. Subir o eureka server, depois o msapi, e depois o msgateway.
 
 Desenho da aplicação:
