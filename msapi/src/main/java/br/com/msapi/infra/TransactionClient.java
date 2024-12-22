@@ -20,8 +20,8 @@ public class TransactionClient {
     private WebClient webClient;
 
     public String consultTransactionHistory(TransactionRequest transactionRequest) {
-        return "";
-/*        return webClient
+//        return "";
+        return webClient
                 .get()
                 .uri("/bank?id={id}&initialDate={initialDate}&finalDate={finalDate}", transactionRequest.getId(),
                         transactionRequest.getInitialDate(), transactionRequest.getFinalDate())
@@ -33,6 +33,6 @@ public class TransactionClient {
                 .timeout(Duration.of(45000, ChronoUnit.MILLIS))
                 .retryWhen(Retry.fixedDelay(3, Duration.ofSeconds(2))
                         .filter(throwable -> throwable instanceof RuntimeException))
-                .block();*/
+                .block();
     }
 }
