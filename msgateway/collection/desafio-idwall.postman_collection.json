@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "751fed29-e820-4aec-b3ee-adf0423967cb",
+		"name": "desafio-idwall",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18447127",
+		"_collection_link": "https://bold-robot-870596.postman.co/workspace/Cresol~008114a6-a658-4029-a804-18dc7cae736c/collection/18447127-751fed29-e820-4aec-b3ee-adf0423967cb?action=share&source=collection_link&creator=18447127"
+	},
+	"item": [
+		{
+			"name": "Keycloack",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientId",
+							"value": "msgateway",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "gI5a4TMzqDBybT5aCl7uaHZd2otSXyn9",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/realms/reamlmsgateway/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "Keycloack",
+					"host": [
+						"Keycloack"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8282/api/transaction/consultLargeVolume",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmLTBwMzhlZVdYOFpIVVNPRVZhM0pEZnBURGVuUDl2TmNSZXI0TUpFWHJBIn0.eyJleHAiOjE3MzQ4OTU5NzIsImlhdCI6MTczNDg5NTY3MiwianRpIjoiMzY1YjVhNGUtY2YwMy00YWIyLWEwOTgtZjE2ZjAxZWJkNGIwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9yZWFtbG1zZ2F0ZXdheSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxM2FjNTZjYS1iMDY2LTRmMDItYTNiOS1iM2ExMWM3M2RiNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtc2dhdGV3YXkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODI4MiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXJlYW1sbXNnYXRld2F5IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJtc2dhdGV3YXkiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiY2xpZW50SG9zdCI6IjE3Mi4xNy4wLjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbXNnYXRld2F5IiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xNy4wLjEiLCJjbGllbnRfaWQiOiJtc2dhdGV3YXkifQ.VGrMDeic1Qu8r-fPhOW0eNK69H9jXA7h3ookmkl42UKqOCaaYpvLlYWm8GyMj4gaD45RHj_x_PTiYfTBHHPUCsr_9jfHVKWN3yboJUL5Lc24czzrxyOe4OmdpyFkhkmmCnSvkmQSY3AMa7imAXn0VXlaNhcDA6wJPX5B2roUbLnKeO47r17GhwjVWVNQ-bqo4V4DHaqWqzKfSz94-j1ZW6uUitSQ-xr2VA911SQHv-F4atd0vj1Dbzepk6qrE_WHPa4vY9px026Yxw4azNU8eTfa36K2H-kcWt7BI1qiBZsMu6WhdzLWbyDLrWd8V_T-cQ5-7x002qFPsl7WOF516Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"initialDate\": \"01/01/2025\",\r\n    \"finalDate\": \"30/01/2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8282/api/transaction/consultLargeVolume",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"api",
+						"transaction",
+						"consultLargeVolume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8282/api/transaction/consult",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmLTBwMzhlZVdYOFpIVVNPRVZhM0pEZnBURGVuUDl2TmNSZXI0TUpFWHJBIn0.eyJleHAiOjE3MzQ4OTU5NzIsImlhdCI6MTczNDg5NTY3MiwianRpIjoiMzY1YjVhNGUtY2YwMy00YWIyLWEwOTgtZjE2ZjAxZWJkNGIwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9yZWFtbG1zZ2F0ZXdheSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIxM2FjNTZjYS1iMDY2LTRmMDItYTNiOS1iM2ExMWM3M2RiNGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtc2dhdGV3YXkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODI4MiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXJlYW1sbXNnYXRld2F5IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJtc2dhdGV3YXkiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiY2xpZW50SG9zdCI6IjE3Mi4xNy4wLjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbXNnYXRld2F5IiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xNy4wLjEiLCJjbGllbnRfaWQiOiJtc2dhdGV3YXkifQ.VGrMDeic1Qu8r-fPhOW0eNK69H9jXA7h3ookmkl42UKqOCaaYpvLlYWm8GyMj4gaD45RHj_x_PTiYfTBHHPUCsr_9jfHVKWN3yboJUL5Lc24czzrxyOe4OmdpyFkhkmmCnSvkmQSY3AMa7imAXn0VXlaNhcDA6wJPX5B2roUbLnKeO47r17GhwjVWVNQ-bqo4V4DHaqWqzKfSz94-j1ZW6uUitSQ-xr2VA911SQHv-F4atd0vj1Dbzepk6qrE_WHPa4vY9px026Yxw4azNU8eTfa36K2H-kcWt7BI1qiBZsMu6WhdzLWbyDLrWd8V_T-cQ5-7x002qFPsl7WOF516Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"initialDate\": \"01/01/2025\",\r\n    \"finalDate\": \"30/01/2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8282/api/transaction/consult",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"api",
+						"transaction",
+						"consult"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

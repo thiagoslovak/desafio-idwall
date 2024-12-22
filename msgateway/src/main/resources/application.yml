@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: msgateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+  # Abilitando o cloud gatway a localizar os microsserviços no discovery
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/reamlmsgateway
+
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 8282
+
+#Se registrando no eureka.
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+#Gerando nome de instancia randomico

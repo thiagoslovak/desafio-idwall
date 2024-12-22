@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: mseurekaserver
+
+server:
+  port: 8761
+
+#Configuração para não se registrar, e para não buscar. Quem busca os ms registrados, é o gateway.
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
